@@ -1,25 +1,21 @@
 ﻿using System;
 
-namespace AtelierConcatenation
+namespace Program
 {
-    class AtelierConcatenation
+    class Program
     {
         static void Main(string[] args)
         {
-            string nom = "Lachance";
-            string prenom = "Bob";
-            bool droitier = true;
-            string fruit = "l'ananas";
-            string condiment = "la moutarde";   // Cette chaîne de caractères pourrait être vide.
-            string ville = "Jonquière";
-            int nbAnneesVille = 8;       // Vous pouvez supposer que ce nombre est supérieur à 0.
-            int depart = 5;              // Vous pouvez supposer que ce nombre est supérieur à 0.
+            Console.Write("Entrez votre année de naissance\n");
+            int anneeNaissance;
+            int.TryParse(Console.ReadLine(), out anneeNaissance);
 
-            string phrase = "";
+            int age = 2025 - anneeNaissance;
 
-            /* ... */
-
-            Console.WriteLine(phrase);
+            if (age < 18)
+                Console.WriteLine("Vous êtes mineur");
+            else
+                Console.WriteLine("Vous êtes majeur");
         }
     }
 }
